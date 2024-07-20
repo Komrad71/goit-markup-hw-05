@@ -405,7 +405,10 @@ transform: translateY(0);
   width: 40px;
   height: 40px;
 }
-.footer-soc-link:hover, .footer-soc-link:focus {
+.footer-soc-link:hover, 
+.footer-soc-link:focus, 
+.subscribe-btn:hover, 
+.subscribe-btn:focus {
   background-color: #31D0AA;
 }
 .footer-soc-link {
@@ -421,9 +424,64 @@ transform: translateY(0);
 .footer-soc-icon {
   fill: #f4f4fd;
 }
+.footer-subscribe {
+  margin-left: auto;
+}
+.footer-subscribe-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.footer-form {
+  display: flex;
+}
+.footer-input {
+  border: 1px solid #fff;
+border-radius: 4px;
+width: 264px;
+height: 40px;
+padding: 8px 16px ;
+/* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15); */
+background-color: transparent;
+margin-right: 24px;
+}
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  min-width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: none;
+  background-color: #4d5ae5;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.icon-telegram {
+  fill: #fff;
+}
 
-
+.header-address-link:hover, 
+.header-address-link:focus, 
+.header-link:hover, 
+.header-link:focus,
+.header-item.current {
+  color: #404bbf;
+}
 
 .backdrop {
   position: fixed;
@@ -465,13 +523,27 @@ padding-top: 72px;
   position: absolute;
   top: 24px;
   right: 24px;
+  background-color: #e7e9fc;
   border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   fill: #e7e9fc;
-  stroke-width: 1px;
-  stroke: rgba(0, 0, 0, 0.1);
+  /* stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.1); */
   /* margin-left: auto; */
   margin-bottom: 24px;
 }
+.icon-close-btn {
+  fill: #2e2f42;
+
+}
+
+.icon-close-btn:hover, .icon-close-btn:focus {
+  fill: #fff;
+}
+.modal-close-btn:hover, .modal-close-btn:focus {
+  background-color: #404bbf;
+}
+
 
 .modal-title {
   line-height: 1.5;
@@ -492,6 +564,12 @@ padding-top: 72px;
   padding-right: 16px;
   outline: transparent;
 }
+.modal-label {
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
 .modal-input:focus {
   border-color: #4d5ae5;
 
@@ -509,11 +587,20 @@ padding-top: 72px;
 .modal-field-wrap {
   position: relative;
 }
+
+.modal-span-gap {
+  margin-right: 8px;
+}
+
 .modal-icon {
   position: absolute;
   left: 26px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.field-comment-gap {
+  margin-bottom: 16px;
 }
 
 .modal-comment {
@@ -525,16 +612,9 @@ padding-top: 72px;
   outline: transparent;
   resize: none;
 }
-
-
-.header-address-link:hover, 
-.header-address-link:focus, 
-.header-link:hover, 
-.header-link:focus,
-.header-item.current {
-  color: #404bbf;
+.field-checkbox-gap {
+  margin-bottom: 24px;
 }
-
 .modal-check-text {
   display: flex;
   align-items: center;
@@ -556,7 +636,70 @@ padding-top: 72px;
   fill: transparent;
 }
 
+.terms-link {
+  line-height: 16px; 
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
+.modal-submit-btn {
+  display: block;
+  margin: 0 auto;
+
+  border: none;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  background-color: #4d5ae5;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.modal-submit-btn:hover, .modal-submit-btn:focus {
+  background-color:#404BBF;
+}
+
+
+
 .modal-check:checked + .modal-check-text span {
   border: none;
   fill: #000;
 }
+
+.modal-check:checked + .modal-check-text > span {
+  /* margin-right: 8px; */
+}
+
+
+задати ыконкам в спокоъ fill 2e2f42
+
+
+/* 
+hover 
+/* fill: #4d5ae5; */ селектор сусіда
+input(class):focus + svg(class) 
+
+
+
+
+
+/* селектор нащадка, коли кнопка в станы ховера  */ 
+
+
+/* border-radius: 2px;
+fill: #404bbf;
+border: 1px solid #404bbf; */
+
+
+
+/* border: 1px solid #4d5ae5;
+border-radius: 4px;
+width: 360px;
+height: 40px; */
