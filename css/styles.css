@@ -437,6 +437,7 @@ transform: translateY(0);
 }
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 .footer-input {
   border: 1px solid #fff;
@@ -446,7 +447,7 @@ height: 40px;
 padding: 8px 16px ;
 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 background-color: transparent;
-margin-right: 24px;
+/* margin-right: 24px; */
 font-size: 12px;
 line-height: 2;
 letter-spacing: 0.04em;
@@ -471,7 +472,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 16px;
+  /* gap: 16px; */
   min-width: 165px;
   height: 40px;
   padding: 8px 24px;
@@ -491,6 +492,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .icon-telegram {
   fill: #fff;
+  margin-left: 16px;
 }
 
 .header-address-link:hover, 
@@ -509,9 +511,9 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
 /* Приховуємо */
-opacity: 0;
-visibility: hidden;
-pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
 }
 .backdrop.is-open {
@@ -541,7 +543,8 @@ padding-top: 72px;
   position: absolute;
   top: 24px;
   right: 24px;
-
+  width: 24px;
+  height: 24px;
   background-color: #e7e9fc;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -550,23 +553,22 @@ padding-top: 72px;
   stroke: rgba(0, 0, 0, 0.1); */
   /* margin-left: auto; */
   /* margin-bottom: 24px; */
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: center; */
-
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-close-btn {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover, .modal-close-btn:focus {
   background-color: #404bbf;
   border: none;
 }
-
-
-
-
 
 .modal-close-btn:hover .icon-close-btn, 
 .modal-close-btn:focus .icon-close-btn {
@@ -586,9 +588,11 @@ padding-top: 72px;
 }
 .modal-label {
   font-size: 12px;
-  line-height: 1.16667;
+  /* line-height: 1.16667; виявляэться треба округлювати значення */
+  line-height: 1.7;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  margin-bottom: 4px;
 }
 
 .modal-input {
@@ -599,11 +603,13 @@ padding-top: 72px;
   padding-left: 38px;
   padding-right: 16px;
   outline: transparent;
+  background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon {
   fill: #2e2f42;
+  left: 16px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -647,6 +653,12 @@ padding-top: 72px;
   padding: 8px 16px;
   outline: transparent;
   resize: none;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .field-checkbox-gap {
   margin-bottom: 24px;
@@ -657,7 +669,7 @@ padding-top: 72px;
   gap: 8px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.7;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -667,9 +679,11 @@ padding-top: 72px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .terms-link {
@@ -686,14 +700,17 @@ padding-top: 72px;
   border: none;
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   background-color: #4d5ae5;
+  cursor: pointer;
+  font-weight: 500
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 
@@ -706,7 +723,8 @@ padding-top: 72px;
 
 .modal-check:checked + .modal-check-text span {
   border: none;
-  fill: #000;
+  background-color: #404bbf;
+  fill: #F4F4FD;
 }
 
 /* селектор дитини */
