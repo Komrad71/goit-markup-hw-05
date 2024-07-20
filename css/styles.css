@@ -587,9 +587,10 @@ padding-top: 72px;
   margin-bottom: 8px;
 }
 .modal-label {
+  display: block;
   font-size: 12px;
   /* line-height: 1.16667; виявляэться треба округлювати значення */
-  line-height: 1.7;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
@@ -659,6 +660,7 @@ padding-top: 72px;
   color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: #4d5ae5;
 }
 .field-checkbox-gap {
   margin-bottom: 24px;
@@ -669,11 +671,14 @@ padding-top: 72px;
   gap: 8px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.7;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
 
+.modal-check-span {
+  display: inline-flex;
+}
 .modal-check-text span {
   width: 16px;
   height: 16px;
@@ -685,6 +690,8 @@ padding-top: 72px;
   fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 
 .terms-link {
   line-height: 16px; 
@@ -704,7 +711,7 @@ padding-top: 72px;
   height: 56px;
   background-color: #4d5ae5;
   cursor: pointer;
-  font-weight: 500
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
